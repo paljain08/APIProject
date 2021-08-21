@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Projects</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="style" href="../Css/bootstrap-sketch.css">
+    <!-- <script>
+        $(function()
+        {
+            $("#include").load("../navbar.html");
+        });
+    </script> -->
+</head>
+
+<body>
+    <!-- <div id="include"></div> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="project.html">Projects
+                            <span class="visually-hidden"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="module.html">Module</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api.html">Api</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user.html">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="useraddress.html">UserAddress</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex jusify-content-end">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- //card -->
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5" style="margin-top: 20px;">
+            <div class="card">
+                <div class="card-header bg-success">
+                    Add Module
+                </div>
+                <div class="card-body">
+                    <form onsubmit="event.preventDefault(); onFormSubmit();  "  autocomplete="off">
+                        <div class="mb-3 row">
+                            <label for="moduletitle" class="col-sm-6 col-form-label">Module Title</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="moduletitle">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="project" class="col-sm-6 col-form-label">Project</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="project">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="description" class="col-sm-6 col-form-label">Description</label>
+                            <div class="form-group col-sm-6">
+        
+                                <textarea class="form-control" id="description" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success d-flex " >Submit</button>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    
+    
+    
+        <!-- LIST TaBLE -->
+        <div class="col-md-5" style="margin-top: 20px;">
+        <table class="table table-success" id="module">
+            <thead>
+                <tr>
+                   
+                    <th scope="col">Module Title</th>
+                    <th scope="col">Project</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr> -->
+    
+            </tbody>
+    
+        </table>
+    </div>
+    <div class="col-md-1"></div>
+    </div>
+
+    
+
+
+
+    <!-- //card -->
+
+
+
+
+
+
+
+
+    <footer class="bg-success text-center text-lg-start" style="position: fixed; bottom: 0%; width: 100%; ">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="../Js/module.js"></script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
