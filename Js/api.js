@@ -2,8 +2,7 @@
 function setData()
   {
 	 
-   var count=Math.round(Math.random()*100000);
-  //localStorage.clear();
+   var count =document.myform.pid.value;
   localStorage.setItem('p'+count,count);
   localStorage.setItem('Url'+count,document.myform.url.value);
   localStorage.setItem('Api_title'+count,document.myform.api_title.value);
