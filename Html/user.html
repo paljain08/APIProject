@@ -67,34 +67,41 @@
                     Add Module
                 </div>
                 <div class="card-body">
-                    <form action="">
+                    <form action="" name="myform">
+					<div class="mb-3 row">
+                            <label for="firstname" class="col-sm-6 col-form-label">Enter Project Id:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" name="p_id" id="firstname">
+                            </div>
+                        </div>
                         <div class="mb-3 row">
                             <label for="profilepic" class="col-sm-6 col-form-label">Profile Picture</label>
                             <div class="col-sm-6">
-                                <input type="file"  id="profilepic" />
+                                <input type="file"  name="u_profile"id="profilepic" />
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="firstname" class="col-sm-6 col-form-label">FirstName</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="firstname">
+                                <input type="text" name="u_fname"class="form-control" id="firstname">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="lastname" class="col-sm-6 col-form-label">LastName</label>
                             <div class=" col-sm-6">
         
-                                <input type="text" class="form-control" id="lastname">
+                                <input type="text" name="u_lname"class="form-control" id="lastname">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="email" class="col-sm-6 col-form-label">Email</label>
                             <div class=" col-sm-6">
         
-                                <input type="text" class="form-control" id="email">
+                                <input type="text" name="u_email"class="form-control" id="email">
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary d-flex " >Submit</button>
+                        <button type="button" class="btn btn-primary d-flex " onclick="setData()">Submit</button>
+						<script src="../Js/user.js"></script>
                        
                     </form>
                 </div>
@@ -106,9 +113,14 @@
     
         <!-- LIST TaBLE -->
         <div class="col-md-5" style="margin-top: 20px;">
-        <table class="table table-dark">
+		
+		<a href="../Html/user_search.html">search</a>
+		<a href="../Html/user_Update.html">Update</a>
+		<a href="../Html/user_Delete.html">delete</a>
+        <table class="table table-dark" id="tab">
             <thead>
                 <tr>
+					<th scope="col">Project Id</th>
                     <th scope="col">Profile Pic</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
