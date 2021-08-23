@@ -1,0 +1,45 @@
+<html>
+<form action="../Html/api.html" method="get" name="myform">
+<table cellpadding="15" width="40%" align="center" style="background-color:blue;">
+
+         <tr>
+			<td colspan="2" align="center">
+					<h2 style="color:white;">Update Project URL</h2>
+			</td>
+		 <tr>
+		<tr>
+			<td>
+			 <label for="validationCustom01" style="color:white;">Enter Id Of Project:</label>
+             <input type="text" class="form-control" name="p_id" id="validationCustom01" placeholder="Project Id" required>
+			</td>
+			
+		</tr>
+		
+		<tr>
+			<td>
+			 <label for="validationCustom01" style="color:white;">Enter New Url:</label>
+             <input type="text" class="form-control" name="p_url" id="validationCustom01" placeholder="Project URL" required>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			 <label for="validationCustom01" style="color:white;">Enter New Title:</label>
+             <input type="text" class="form-control" name="p_title" id="validationCustom01" placeholder="Project title" required>
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<td colspan="2" align="center">
+			 <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="updateData()" name="submit">Update</button>
+			</td>
+		</tr>
+		<script src="../Js/api.js"></script>
+		
+		
+</table>
+</form>
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</html>
