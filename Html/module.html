@@ -48,7 +48,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="useraddress.html">UserAddress</a>
                     </li>
-
+                
+                    
                 </ul>
                 <form class="d-flex jusify-content-end">
                     <input class="form-control me-sm-2" type="text" placeholder="Search">
@@ -72,26 +73,29 @@
                         <div class="mb-3 row">
                             <label for="moduletitle" class="col-sm-6 col-form-label">Module Title</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" name="moduletitle" required>
+                                <input type="text" class="form-control" id="inpTitle" name="moduletitle" required>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="project" class="col-sm-6 col-form-label">Project</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" name="project" required>
+                                <input type="text" class="form-control" id="inpProject" name="project" required>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="description" class="col-sm-6 col-form-label">Description</label>
                             <div class="form-group col-sm-6">
 
-                                <textarea class="form-control" name="description" rows="3" required></textarea>
+                                <textarea class="form-control" id="inpDescription" name="description" rows="3"
+                                    required></textarea>
                             </div>
                         </div>
                         <div class="row">
-                            <button type="submit" class="btn btn-success d-flex" name="submit">Submit</button>
+                            <button type="submit" id="inpButton" class="btn btn-success d-flex"
+                                name="submit">Submit</button>
 
-                            <button type="button" class="btn btn-warning d-flex " name="update" disabled onclick="updateRecord();">Update</button>
+                            <button type="button" class="btn btn-warning d-flex " name="update" disabled
+                                onclick="updateRecord();">Update</button>
                         </div>
 
 
@@ -105,10 +109,19 @@
 
         <!-- LIST TaBLE -->
         <div class="col-md-5" style="margin-top: 20px;">
-            <table class="table table-success" id="module">
+            <form class="row" name="searchbar">
+                <input class="form-control col-md-8" type="text" name="search" id="search"
+                    placeholder="Search in table">
+                <div class="col-md-1"></div>
+                <button type="button" class="btn btn-warning col-md-2" onclick="searchData()">Search</button>
+            </form><br>
+            <div id="search_result">
+                
+            </div><br><br>
+            <table class="table table-success" id="module" name="module">
                 <thead>
                     <tr>
-
+                        <th scope="col">ID</th>
                         <th scope="col">Module Title</th>
                         <th scope="col">Project</th>
                         <th scope="col">Description</th>
