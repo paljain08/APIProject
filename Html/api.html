@@ -67,57 +67,65 @@
                     Add API
                 </div>
                 <div class="card-body">
-                    <form action="">
+                    <form action="" name="myform">
+					     <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-6 col-form-label">Enter Project Id</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="pid" onfocus="this.value=''" class="form-control" id="inputPassword">
+                            </div>
+                        </div>
+					
                         <div class="mb-3 row">
                             <label for="inputPassword" class="col-sm-6 col-form-label">Url</label>
                             <div class="col-sm-6">
-                                <input type="password" class="form-control" id="inputPassword">
+                                <input type="text" name="url" onfocus="this.value=''" class="form-control" id="inputPassword">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="inputPassword" class="col-sm-6 col-form-label">Api Title</label>
                             <div class="col-sm-6">
-                                <input type="password" class="form-control" id="inputPassword">
+                                <input type="text" name="api_title"class="form-control" id="inputPassword">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="inputPassword" class="col-sm-6 col-form-label">Method</label>
                             <div class="col-sm-6">
-                                <input type="password" class="form-control" id="inputPassword">
+                                <input type="text" name="method" class="form-control" id="inputPassword">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="inputPassword" class="col-sm-6 col-form-label">Request</label>
                             <div class="col-sm-6">
-                                <input type="password" class="form-control" id="inputPassword">
+                                <input type="text" name="req" class="form-control" id="inputPassword">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="inputPassword" class="col-sm-6 col-form-label">Response</label>
                             <div class="col-sm-6">
-                                <input type="password" class="form-control" id="inputPassword">
+                                <input type="text" name="res" class="form-control" id="inputPassword">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="inputPassword" class="col-sm-6 col-form-label">Project</label>
+                            <label for="inputPassword"  class="col-sm-6 col-form-label">Project</label>
                             <div class="col-sm-6">
-                                <input type="password" class="form-control" id="inputPassword">
+                                <input type="text" name="project" class="form-control" id="inputPassword">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="inputPassword" class="col-sm-6 col-form-label">Module</label>
+                            <label for="inputPassword"  class="col-sm-6 col-form-label">Module</label>
                             <div class="col-sm-6">
-                                <input type="password" class="form-control" id="inputPassword">
+                                <input type="text" name="module" class="form-control" id="inputPassword">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="inputPassword" class="col-sm-6 col-form-label">Description</label>
+                            <label for="inputPassword"  class="col-sm-6 col-form-label">Description</label>
                             <div class="form-group col-sm-6">
         
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" name="desc" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary d-flex " >Submit</button>
+                        <button type="button" class="btn btn-primary d-flex " onclick="setData()" >Add_Project</button>
+						 <script src="../Js/api.js"></script>	
                        
                     </form>
                 </div>
@@ -128,11 +136,18 @@
     
     
         <!-- LIST TaBLE -->
-        <div class="col-md-8" style="margin-top: 20px;">
-        <table class="table table-dark">
+        <div class="col-md-8" style="margin-top: 20px;" >
+		
+		
+		<a href="../Html/Api_search.html">search</a>
+		<a href="../Html/Api_update.html">Update</a>
+		<a href="../Html/Api_delete.html">delete</a>
+		
+		<h1>Project Details</h1>
+        <table class="table table-dark" id="tab">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">Project Id</th>
                     <th scope="col">Url</th>
                     <th scope="col">Api Title</th>
                     <th scope="col">Method</th>
