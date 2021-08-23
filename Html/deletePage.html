@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="style" href="../Css/bootstrap.css">
+    <script src="E:\APIproject\TeamB\Js\project.js">
+    </script>
+</head>
+<body><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="project.html">Projects
+                        <span class="visually-hidden"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="module.html">Module</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="api.html">Api</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="user.html">User</a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5" style="margin-top: 20px;">
+        <div class="card">
+            <div class="card-header">
+                <center>Delete Project</center>
+            </div>
+            <div class="card-body">
+                <form action="">
+                    <div class="mb-3 row">
+                        <label for="projectID" class="col-sm-6 col-form-label">Enter Project Id for delete</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="ID1" id="projectID">
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary d-flex" onclick="deleteData();">Delete</button>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a href="E:\APIproject\TeamB\Html\searchPage.html"><button><img src="E:\APIproject\TeamB\Html\search.png" width="40" height="40" id="Search">Search</button></a>
+        <a href="E:\APIproject\TeamB\Html\updatePage.html"><button><img src="E:\APIproject\TeamB\Html\update.png" width="40" height="40" id="Update" />Update</button></a>
+        <a href="E:\APIproject\TeamB\Html\deletePage.html"><button><img src="E:\APIproject\TeamB\Html\delete.png" width="50" height="40" id="Delete"/>Delete</button></a>
+    </div>
+
+    
+    
+</body>
+</html>
