@@ -67,49 +67,55 @@
                     Add Module
                 </div>
                 <div class="card-body">
-                    <form onsubmit="event.preventDefault(); onFormSubmit();  "  autocomplete="off">
+                    <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off" name="myform">
+                        <input type="number" class="form-control" name="uid" hidden>
                         <div class="mb-3 row">
                             <label for="moduletitle" class="col-sm-6 col-form-label">Module Title</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="moduletitle">
+                                <input type="text" class="form-control" name="moduletitle" required>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="project" class="col-sm-6 col-form-label">Project</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="project">
+                                <input type="text" class="form-control" name="project" required>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="description" class="col-sm-6 col-form-label">Description</label>
                             <div class="form-group col-sm-6">
-        
-                                <textarea class="form-control" id="description" rows="3"></textarea>
+
+                                <textarea class="form-control" name="description" rows="3" required></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-success d-flex " >Submit</button>
-                       
+                        <div class="row">
+                            <button type="submit" class="btn btn-success d-flex" name="submit">Submit</button>
+
+                            <button type="button" class="btn btn-warning d-flex " name="update" disabled onclick="updateRecord();">Update</button>
+                        </div>
+
+
                     </form>
                 </div>
             </div>
         </div>
-        
-    
-    
-    
+
+
+
+
         <!-- LIST TaBLE -->
         <div class="col-md-5" style="margin-top: 20px;">
-        <table class="table table-success" id="module">
-            <thead>
-                <tr>
-                   
-                    <th scope="col">Module Title</th>
-                    <th scope="col">Project</th>
-                    <th scope="col">Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- <tr>
+            <table class="table table-success" id="module">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Module Title</th>
+                        <th scope="col">Project</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
                                 <th scope="row">1</th>
                                 <td>Mark</td>
                                 <td>Otto</td>
@@ -127,15 +133,15 @@
                                 <td>the Bird</td>
                                 <td>@twitter</td>
                             </tr> -->
-    
-            </tbody>
-    
-        </table>
-    </div>
-    <div class="col-md-1"></div>
+
+                </tbody>
+
+            </table>
+        </div>
+        <div class="col-md-1"></div>
     </div>
 
-    
+
 
 
 
