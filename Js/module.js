@@ -105,7 +105,7 @@ function updateRecord() {
         selectedRow.cells[1].innerHTML = localStorage.getItem('ModuleTitle' + uid);
         selectedRow.cells[2].innerHTML = localStorage.getItem('Project' + uid);
         selectedRow.cells[3].innerHTML = localStorage.getItem('Description' + uid);
-    }
+    )
 
    
 
