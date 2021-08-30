@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="style" href="../Css/bootstrap.css">
+    <link rel="style" href="../Css/bootstrap-sketch.css">
     <!-- <script>
         $(function()
         {
@@ -21,7 +21,7 @@
 
 <body>
     <!-- <div id="include"></div> -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Project</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
@@ -60,38 +60,36 @@
 
     <!-- //card -->
     <div class="row">
-       
-        <div class="col-md-4" style="margin-top: 20px; margin-bottom: 100px;">
+        <div class="col-md-1"></div>
+        <div class="col-md-5" style="margin-top: 20px;">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header bg-success">
                     ADD PROJECT
                 </div>
                 <div class="card-body">
-                    <form action="" name="myform">
-					   					
+                    <form onsubmit="event.preventDefault(); saveData();  "  autocomplete="off" name="myform">
                         <div class="mb-3 row">
-                            <label for="inputPassword" class="col-sm-6 col-form-label">Enter Title</label>
+                            <label for="project_title" class="col-sm-6 col-form-label">Enter ProjectTitle</label>
                             <div class="col-sm-6">
-                                <input type="text" name="title" onfocus="this.value=''" class="form-control" id="inputPassword">
+                                <input type="text" name="project_title" onfocus="this.value=''" class="form-control" id="project_title">
                             </div>
                         </div>
                         
                         <div class="mb-3 row">
-                            <label for="inputPassword"  class="col-sm-6 col-form-label">Description</label>
+                            <label for="project_description"  class="col-sm-6 col-form-label">Description</label>
                             <div class="form-group col-sm-6">
         
-                                <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" name="project_description" id="project_description" rows="3"></textarea>
                             </div>
                         </div>
 
                         <div class="mb-3 row">
-                            <label for="inputPassword" class="col-sm-6 col-form-label">Project logo</label>
+                            <label for="project_logo" class="col-sm-6 col-form-label">Project logo</label>
                             <div class="col-sm-6">
-                                <input type="file"  id="logo" />
+                                <input type="file"  id="project_logo" />
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary d-flex " onclick="saveData()" >Add_Project</button>
-						 <script src="../JS/project.js"></script>	
+                        <button type="submit" class="btn btn-success d-flex " >Submit</button>
                        
                     </form>
                 </div>
@@ -102,15 +100,17 @@
     
     
         <!-- LIST TaBLE -->
-        <div class="col-md-8" style="margin-top: 20px;" >
-		
-		
-		<a href="../Html/searchPage.html">search</a>
-		<a href="../Html/updatePage.html">Update</a>
-		<a href="../Html/deletePage.html">delete</a>
-		
-		<h1>Project Details</h1>
-        <table class="table table-dark" id="tab">
+        <div class="col-md-5" style="margin-top: 20px;">
+            <form class="row" name="searchbar">
+                <input class="form-control col-md-8" type="text" name="search" id="search"
+                    placeholder="Search in table">
+                <div class="col-md-1"></div>
+                <button type="button" class="btn btn-warning col-md-2" onclick="searchData()">Search</button>
+            </form><br>
+            <div id="search_result">
+                
+            </div><br><br>
+        <table class="table table-success" id="tab">
             <thead>
                 <tr>
                     <th scope="col">Project Id</th>
@@ -146,17 +146,10 @@
     <div class="col-md-1"></div>
     </div>
 
-    
 
 
 
     <!-- //card -->
-
-
-
-
-
-
 
 
     <footer class="bg-light text-center text-lg-start" style="position: fixed; bottom: 0%; width: 100%; ">
@@ -169,7 +162,7 @@
     </footer>
 
 
-
+    <script src="../Js/project.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
