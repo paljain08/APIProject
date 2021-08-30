@@ -21,7 +21,7 @@
 
 <body>
     <!-- <div id="include"></div> -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Project</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
@@ -63,45 +63,38 @@
         <div class="col-md-1"></div>
         <div class="col-md-5" style="margin-top: 20px;">
             <div class="card">
-                <div class="card-header">
-                    Add Module
+                <div class="card-header bg-success">
+                    Add User
                 </div>
                 <div class="card-body">
-                    <form action="" name="myform">
-					<div class="mb-3 row">
-                            <label for="firstname" class="col-sm-6 col-form-label">Enter Project Id:</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" name="p_id" id="firstname">
-                            </div>
-                        </div>
+                    <form action="">
                         <div class="mb-3 row">
                             <label for="profilepic" class="col-sm-6 col-form-label">Profile Picture</label>
                             <div class="col-sm-6">
-                                <input type="file"  name="u_profile"id="profilepic" />
+                                <input type="file"  id="profilepic" />
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="firstname" class="col-sm-6 col-form-label">FirstName</label>
                             <div class="col-sm-6">
-                                <input type="text" name="u_fname"class="form-control" id="firstname">
+                                <input type="text" class="form-control" id="firstname">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="lastname" class="col-sm-6 col-form-label">LastName</label>
                             <div class=" col-sm-6">
         
-                                <input type="text" name="u_lname"class="form-control" id="lastname">
+                                <input type="text" class="form-control" id="lastname">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="email" class="col-sm-6 col-form-label">Email</label>
                             <div class=" col-sm-6">
         
-                                <input type="text" name="u_email"class="form-control" id="email">
+                                <input type="text" class="form-control" id="email">
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary d-flex " onclick="setData()">Submit</button>
-						<script src="../Js/user.js"></script>
+                        <button type="submit" class="btn btn-success d-flex " >Submit</button>
                        
                     </form>
                 </div>
@@ -113,14 +106,17 @@
     
         <!-- LIST TaBLE -->
         <div class="col-md-5" style="margin-top: 20px;">
-		
-		<a href="../Html/user_search.html">search</a>
-		<a href="../Html/user_Update.html">Update</a>
-		<a href="../Html/user_Delete.html">delete</a>
-        <table class="table table-dark" id="tab">
+            <form class="row" name="searchbar">
+                <input class="form-control col-md-8" type="text" name="search" id="search"
+                    placeholder="Search in table">
+                <div class="col-md-1"></div>
+                <button type="button" class="btn btn-warning col-md-2" onclick="searchData()">Search</button>
+            </form><br>
+            <div id="search_result">
+        
+        <table class="table table-success">
             <thead>
                 <tr>
-					<th scope="col">Project Id</th>
                     <th scope="col">Profile Pic</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
