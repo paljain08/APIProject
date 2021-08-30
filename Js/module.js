@@ -11,8 +11,8 @@ function onFormSubmit() {
 function readFormData() {
 
 
-    var count = Math.round(Math.random() * 100000);
-
+    var count = document.myform.inpId.value;
+   
     localStorage.setItem('uid' + count, count);
     localStorage.setItem('ModuleTitle' + count, document.myform.moduletitle.value);
     localStorage.setItem('Project' + count, document.myform.project.value);
@@ -56,8 +56,8 @@ function onEdit(td) {
 
     selectedRow = td.parentElement.parentElement;
 
-    document.myform.update.disabled = false;
-    document.myform.submit.disabled = true;
+
+    document.myform.submit.disabled = false;
     document.myform.uid.value = selectedRow.cells[0].innerHTML;
     document.myform.moduletitle.value = selectedRow.cells[1].innerHTML;
     document.myform.project.value = selectedRow.cells[2].innerHTML;
@@ -115,37 +115,39 @@ function onDelete(td) {
 
 }
 
-function searchData() {
+function myFunction() {
+  
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  // 'tbody = table.getElementsByTagName("tbody")'
+  tr = table.getElementsByTagName("tr");
 
+  
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
 
-    // var input, filter, tr, td, a, i, txtValue;
-    // input = document.searchbar.search.value;
-    // filter = input.value.toUpperCase();
-    // tr = document.getElementById("myUL");
-    // li = ul.getElementsByTagName('li');
-
-    // // Loop through all list items, and hide those who don't match the search query
-    // for (i = 0; i < li.length; i++) {
-    //     a = li[i].getElementsByTagName("a")[0];
-    //     txtValue = a.textContent || a.innerText;
-    //     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    //         li[i].style.display = "";
-    //     } else {
-    //         li[i].style.display = "none";
-    //     }
-    // }
-
-
-
-    var uid = document.searchbar.search.value;
+    
+    // var uid = document.searchbar.search.value;
     // alert('Module Title: '+localStorage.getItem('ModuleTitle'+uid)+'\n'+'Project: '+localStorage.getItem('Project'+uid)+'\n'+'Description: '+localStorage.getItem('Description'+uid));
 
-    var data = "<table class='table table-secondary'><thead><tr><th>Module Title</th><th>Project</th><th>Description</th></tr></thead><tbody><tr><td>" + localStorage.getItem('ModuleTitle' + uid) + "</td><td>" + localStorage.getItem('Project' + uid) + "</td><td>" + localStorage.getItem('Description' + uid) + "</td></tr></tbody></table>";
+    // var data = "<table class='table table-secondary'><thead><tr><th>Module Title</th><th>Project</th><th>Description</th></tr></thead><tbody><tr><td>" + localStorage.getItem('ModuleTitle' + uid) + "</td><td>" + localStorage.getItem('Project' + uid) + "</td><td>" + localStorage.getItem('Description' + uid) + "</td></tr></tbody></table>";
 
-    document.getElementById("search_result").innerHTML = data;
+    // document.getElementById("search_result").innerHTML = data;
 
 
-}
+
 
 // const inpTitle = document.getElementById("inpTitle");
 // const inpProject = document.getElementById("inpProject");
