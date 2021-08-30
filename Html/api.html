@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Projects</title>
+    <title>API'S</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +23,7 @@
     <!-- <div id="include"></div> -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Project</a>
+            <a class="navbar-brand" href="#">API'S</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
                 aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -67,54 +67,60 @@
                     Add API
                 </div>
                 <div class="card-body">
-                    <form action="" onsubmit="event.preventDefault(); setData();  "  autocomplete="off" name="myform">
+                     <form onsubmit="event.preventDefault(); saveData();  "  autocomplete="off" name="myform">
+					 <div class="mb-3 row">
+                            <label for="url" class="col-sm-6 col-form-label">Project Id</label>
+                            <div class="col-sm-6">
+                                <input type="text" id="pid" class="form-control" id="url">
+                            </div>
+                        </div>
                         <div class="mb-3 row">
                             <label for="url" class="col-sm-6 col-form-label">Url</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="url">
+                                <input type="text" id="url" class="form-control" id="url">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="api_title" class="col-sm-6 col-form-label">Api Title</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="api_title">
+                                <input type="text" id="api_title" class="form-control" id="api_title">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="method" class="col-sm-6 col-form-label">Method</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="method">
+                                <input type="text" id="method" class="form-control" id="method">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="req" class="col-sm-6 col-form-label">Request</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="req">
+                                <input type="text" id="req" class="form-control" id="req">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="res" class="col-sm-6 col-form-label">Response</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="res">
+                                <input type="text" id="res" class="form-control" id="res">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="project" class="col-sm-6 col-form-label">Project</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="project">
+                                <input type="text" id="project" class="form-control" id="project">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="module" class="col-sm-6 col-form-label">Module</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="module">
+                                <input type="text" id="module" class="form-control" id="module">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="desc" class="col-sm-6 col-form-label">Description</label>
                             <div class="form-group col-sm-6">
         
-                                <textarea class="form-control" id="desc" rows="3"></textarea>
+                                <textarea id="desc" class="form-control" id="desc" rows="3"></textarea>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-success d-flex " >Submit</button>
@@ -136,10 +142,10 @@
                 <button type="button" class="btn btn-warning col-md-2" onclick="searchData()">Search</button>
             </form><br>
             <div id="search_result">
-        <table class="table table-success ">
+        <table class="table table-success " id="tab">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">ProjectId</th>
                     <th scope="col">Url</th>
                     <th scope="col">Api Title</th>
                     <th scope="col">Method</th>
@@ -150,7 +156,7 @@
                     <th scope="col">Description</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tb">
                 <!-- <tr>
                                 <th scope="row">1</th>
                                 <td>Mark</td>
@@ -200,6 +206,7 @@
     </footer>
 
 
+    <script src="../Js/api.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
